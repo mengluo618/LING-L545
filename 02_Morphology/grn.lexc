@@ -1,0 +1,58 @@
+Multichar_Symbols
+
+%>                   ! Frontera de morfema
+%<n%>                ! Nombre
+%<gen%>              ! Genitivo
+%<loc%>              ! Locativo
+%{m%}		     ! Multichar_Symbols
+%<der_kue%>          ! derivational suffix
+%-{m}e               ! VowAton
+%{g%}                ! archiphoneme k
+%{n%}                ! archiphoneme g
+%<pl%>               ! Plural
+%{s%}                ! archiphoneme 
+
+LEXICON Root
+
+Nouns ;
+
+LEXICON N
+
+%<n%>: CASE ;
+%<n%>: SUBST ;
+
+LEXICON SUBST
+
+%<der_kue%>:%>kue # "weight: 1.0" ;
+
+LEXICON CASE-NAS
+
+%<nom%>: # ; ! ""
+%<loc%>:%>%{m%}e # ; ! "a, en"
+%<gen%>:%>gui #; ! "de"
+
+LEXICON CASE
+
+%<nom%>: # ; ! ""
+%<gen%>:%>gui #; ! "de"
+%<loc%>:%>%{m%}e # ; ! "a, en"
+
+LEXICON N-SPA
+
+:%{s%} N ; 
+
+LEXICON Nouns
+
+ava:ava N ; ! "raza, gente"
+óga:óga N ; ! "casa"
+irũ:irũ N ; ! "amigo"
+apyka:apyka N ; ! "silla"
+tembiasa N ; ! "experiencia"
+tembiasakue N ; ! "historia"
+irũ:irũ N ; ! "amigo"
+asociación:asociación N-SPA ;
+declaración:declaración N-SPA ;
+
+LEXICON PL
+
+%<pl%>:%>%{n%}%{g%}uéra CASE ;
